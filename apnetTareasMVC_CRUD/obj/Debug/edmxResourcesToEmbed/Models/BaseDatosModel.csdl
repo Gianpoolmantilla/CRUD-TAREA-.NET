@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BaseTareasSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PRIORIDAD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TAREAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO" Type="Int32" />
+    <Property Name="OBSERVACION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PRIORIDAD" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TIPO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="BaseTareasSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PRIORIDAD" EntityType="Self.PRIORIDAD" />
+    <EntitySet Name="TAREAS" EntityType="Self.TAREAS" />
+    <EntitySet Name="TIPO" EntityType="Self.TIPO" />
+    <EntitySet Name="USUARIOS" EntityType="BaseTareasSModel.USUARIOS" />
+  </EntityContainer>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="EDAD" Type="Int32" />
+    <Property Name="FECHA_ALTA" Type="DateTime" Precision="3" />
+    <Property Name="DEBAJA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="USERID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

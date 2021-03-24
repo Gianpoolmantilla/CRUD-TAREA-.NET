@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BaseTareasSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PRIORIDAD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TAREAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar(max)" />
+    <Property Name="TIPO" Type="int" />
+    <Property Name="OBSERVACION" Type="varchar(max)" />
+    <Property Name="PRIORIDAD" Type="int" />
+  </EntityType>
+  <EntityType Name="TIPO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="60" />
+    <Property Name="APELLIDO" Type="varchar" MaxLength="60" />
+    <Property Name="EDAD" Type="int" />
+    <Property Name="FECHA_ALTA" Type="datetime" />
+    <Property Name="DEBAJA" Type="varchar" MaxLength="1" />
+    <Property Name="USERID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="BaseTareasSModelStoreContainer">
+    <EntitySet Name="PRIORIDAD" EntityType="Self.PRIORIDAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAREAS" EntityType="Self.TAREAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO" EntityType="Self.TIPO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
