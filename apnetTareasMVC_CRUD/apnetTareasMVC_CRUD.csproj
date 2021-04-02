@@ -46,10 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -131,6 +131,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PRIORIDADsController.cs" />
+    <Compile Include="Controllers\TareaPorEstadoController.cs" />
     <Compile Include="Controllers\TAREASController.cs" />
     <Compile Include="Controllers\TIPOesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -154,6 +155,7 @@
     <Compile Include="Models\PRIORIDAD.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TareaPorEstado.cs" />
     <Compile Include="Models\TAREAS.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
@@ -328,8 +330,8 @@
     <Content Include="src\scss\variables\_spacing.scss" />
     <Content Include="src\scss\_global.scss" />
     <Content Include="src\scss\_variables.scss" />
-    <Content Include="Views\TAREAS\TareasPorEstado.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\TareaPorEstado\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

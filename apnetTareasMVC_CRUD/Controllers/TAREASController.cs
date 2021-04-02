@@ -17,48 +17,8 @@ namespace apnetTareasMVC_CRUD.Controllers
         // GET: TAREAS
         public ActionResult Index()
         {
-            //var desTipo = db.TIPO.Join(db.TAREAS, tipo => tipo.ID,
-            //    tarea => tarea.TIPO, (tipo, tarea) => new { tipo, tarea }).FirstOrDefault( x=> x.tipo.ID== 1);
-            //TAREAS TAREAS = new TAREAS();
-            //List<TAREAS> ListItem = db.TAREAS.ToList(); 
-            // return View(ListItem);
-
-            // var descripcionTipo = db.TIPO.Select(x => new { x.DESCRIPCION }).FirstOrDefault();
-
-            // var descripcionTipo = db.TIPO.Where(x => x.ID == 1).Include(x => x.DESCRIPCION).FirstOrDefault();
-           
-            //var descripcionTipo = db.TIPO.Where(x => x.ID == 1)
-            //    .Select(x => new { x.DESCRIPCION }).FirstOrDefault();
-
-
             return View(db.TAREAS.ToList());
         }
-
-        public ActionResult TareasPorEstado()
-        {
-            //var descripcionTipo = db.TIPO.Select(x => new { x.DESCRIPCION }).FirstOrDefault();
-            //List<TAREAS> ListItem = new List<TAREAS>();
-            //TAREAS tr = db.TAREAS.Find();
-
-           
-
-
-            //var descripcionTipo = db.TIPO.Where(x => x.ID == 2)
-            //  .Select(x => new { x.DESCRIPCION }).First();
-
-           
-            //    tr.ID = item.ID;
-            //    tr.DESCRIPCION = item.DESCRIPCION.ToList();
-            //    tr.TIPO = 2;
-            //    tr.OBSERVACION = item.OBSERVACION;
-            //    tr.PRIORIDAD = 1;
-            //    ListItem.Add(tr);          
-
-
-
-            return View(db.TAREAS.ToList());
-        }
-
 
         // GET: TAREAS/Details/5
         public ActionResult Details(int? id)

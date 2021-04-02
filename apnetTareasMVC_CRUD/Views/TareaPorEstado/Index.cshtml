@@ -1,0 +1,52 @@
+﻿@model IEnumerable<apnetTareasMVC_CRUD.Models.TareaPorEstado>
+
+@{
+    ViewBag.Title = "Reporte";
+}
+
+<h2>Tareas Por Estado</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            tarea
+        </th>
+        <th>
+            tipo de tarea
+        </th>
+        <th>
+            Prioridad
+        </th>
+        <th>
+            Obervacion
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TAREA.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TAREA.DESCRIPCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DSTIPO.DESCRIPCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DSPRIORIDAD.DESCRIPCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TAREA.OBSERVACION)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+
+
